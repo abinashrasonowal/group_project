@@ -36,10 +36,6 @@ export default function header() {
                     </ul>              
                         <Link className='mx-2' to='/login'><Button variant="outline-dark">Login</Button></Link>{" "}                
                         <Link className='mx-3' to='/register'><Button variant="outline-dark">Register here</Button></Link>
-                    <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
