@@ -6,6 +6,9 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import About from "./components/About";
+import Profile from "./components/Profile";
+import { useSelector } from "react-redux"
+import ProtectedRoute from "./ProtectedRoute";
 
 import {
   BrowserRouter as Router,
@@ -14,6 +17,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const { isAuthenticated } = useSelector((state) => state.root);
   return (
     <>
       <Router>
@@ -23,6 +27,9 @@ function App() {
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/about" element={<About />} />
+          <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
+            <Route exact path="/profile" element={<Profile />} />
+          </Route>
         </Routes>
         <Footer />
       </Router>

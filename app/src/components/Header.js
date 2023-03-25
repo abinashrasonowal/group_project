@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 export default function header() {
     return (
         <>
-            <div className="container my-3"><h1>Something</h1></div>
-            <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div className="container d-flex justify-content-between align-items-center my-3"><h1>Something</h1><h3>ambulance :-0000000000</h3></div>
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Navbar</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,8 +18,8 @@ export default function header() {
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about/">About</Link>
+                            <li className="nav-item ">
+                                <Link className="nav-link " to="/about/">About</Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,8 +36,9 @@ export default function header() {
                                 <Link className="nav-link disabled">Disabled</Link>
                             </li>
                         </ul>
-                        <Link className='mx-2' to='/login'><Button variant="outline-dark">Login</Button></Link>{" "}
-                        <Link className='mx-3' to='/register'><Button variant="outline-dark">Register here</Button></Link>
+                        <Link className='mx-2' to='/login'><Button variant="outline-light">Login</Button></Link>{" "}
+                        <Link className='mx-3' to='/register'><Button variant="outline-light">Register</Button></Link>
+                        <Link className='mx-3' to='/profile'><Button variant="outline-light">profile</Button></Link>
                     </div>
                 </div>
             </nav>
